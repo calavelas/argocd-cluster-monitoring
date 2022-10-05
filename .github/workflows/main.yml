@@ -9,7 +9,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  Deploy-to-Kubernetes:
+  deploy-argo-application:
     runs-on: ubuntu-latest
     steps:
       - name: Apply ArgoCD Application
@@ -17,4 +17,13 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
         with:
-          args: get pod -A
+          args: apply -f argo-application
+  deploy-ingress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply ArgoCD Application
+        uses: actions-hub/kubectl@master
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
+        with:
+          args: apply -f ingress

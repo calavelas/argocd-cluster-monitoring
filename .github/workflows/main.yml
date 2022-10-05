@@ -12,6 +12,8 @@ jobs:
   deploy-argo-application:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Apply ArgoCD Application
         uses: actions-hub/kubectl@master
         env:
@@ -21,6 +23,8 @@ jobs:
   deploy-ingress:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Apply ArgoCD Application
         uses: actions-hub/kubectl@master
         env:

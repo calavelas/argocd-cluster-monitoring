@@ -14,7 +14,7 @@ spec:
               service:
                 name: argocd-server
                 port:
-                  name: web
+                  number: 443
             path: /
             pathType: Prefix
     - host: argocd.10.1.0.151.nip.io
@@ -24,6 +24,6 @@ spec:
               service:
                 name: argocd-server
                 port:
-                  name: web
+                  number: 443
             path: /
             pathType: Prefix

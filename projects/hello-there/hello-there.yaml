@@ -7,11 +7,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: hello-there
+      name: hello-there-app
   template:
     metadata:
       labels:
-        name: hello-there
+        name: hello-there-app
     spec:
       containers:
         - name: hello-there
@@ -32,4 +32,4 @@ spec:
       protocol: TCP
       targetPort: 80
   selector:
-    name: hello-there
+    name: hello-there-app

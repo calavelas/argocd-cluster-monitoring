@@ -17,7 +17,10 @@ spec:
       recurse: true
   destination:
     name: in-cluster
+    namespace: hello-there
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
+    syncOptions:
+    - CreateNamespace=true

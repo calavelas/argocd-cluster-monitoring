@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/calavelas/lazarus-cluster-monitoring
     targetRevision: LAZARUS
-    path: manifests/grafana
+    path: argocd-manifest/grafana
     directory:
       recurse: true
   destination:

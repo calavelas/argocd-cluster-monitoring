@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/calavelas/lazarus-cluster-monitoring
     targetRevision: LAZARUS
-    path: manifests/prometheus
+    path: argocd-manifest/prometheus
     directory:
       recurse: true
   destination:

@@ -1,0 +1,19 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: hello-there-external
+  labels:
+    project: external-ingress
+  namespace: hello-there
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`grafana.calavelas.net`) # Hostname to match
+      kind: Rule
+      priority: 10
+      services:
+        - name: hello-there
+          port: 3000

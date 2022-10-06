@@ -1,14 +1,14 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd-server
+  name: argocd-internal
   namespace: argocd
 spec:
   entryPoints:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`argocd.calavelas.net`)
+      match: Host(`argocd.10.1.0.151.nip.io`)
       priority: 10
       services:
         - name: argocd-server

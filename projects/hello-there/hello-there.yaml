@@ -5,9 +5,6 @@ metadata:
   name: hello-there
   namespace: hello-there
 spec:
-  selector:
-    matchLabels:
-      name: hello-there-app
   template:
     metadata:
       labels:

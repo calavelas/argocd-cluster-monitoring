@@ -16,4 +16,4 @@ spec:
       priority: 10
       services:
         - name: hello-there
-          port: 3000
+          port: 80

@@ -11,7 +11,7 @@ spec:
     - web
     - websecure
   routes:
-    - match: Host(`grafana.calavelas.net`) # Hostname to match
+    - match: Host(`calavelas.net`) # Hostname to match
       kind: Rule
       priority: 10
       services:

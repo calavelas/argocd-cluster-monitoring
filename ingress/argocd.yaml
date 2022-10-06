@@ -13,5 +13,12 @@ spec:
       services:
         - name: argocd-server
           port: 80
+    - kind: Rule
+      match: Host(`argocd.10.1.0.151.nip.io`) && Headers(`Content-Type`, `application/grpc`)
+      priority: 11
+      services:
+        - name: argocd-server
+          port: 80
+          scheme: h2c
   tls:
     certResolver: default

@@ -1,0 +1,17 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana-external
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`grafana.calavelas.net`) # Hostname to match
+      kind: Rule
+      priority: 10
+      services:
+        - name: grafana
+          port: 3000

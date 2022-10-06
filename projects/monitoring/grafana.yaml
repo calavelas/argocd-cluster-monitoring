@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: monitoring
+  name: grafana
   namespace: monitoring
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/calavelas/lazarus-cluster-monitoring
     targetRevision: LAZARUS
-    path: projects/monitoring
+    path: manifests/grafana
     directory:
       recurse: true
   destination:

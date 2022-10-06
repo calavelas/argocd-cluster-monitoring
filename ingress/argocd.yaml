@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`argocd.calavelas.net`)
+      match: Host(`argocd.10.1.0.151.nip.io`)
       priority: 10
       services:
         - name: argocd-server

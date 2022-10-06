@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: monitoring
-  namespace: argocd
+  namespace: monitoring
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/calavelas/lazarus-cluster-monitoring
     targetRevision: LAZARUS
-    path: manifests/
+    path: manifests/prometheus
     directory:
       recurse: true
   destination:

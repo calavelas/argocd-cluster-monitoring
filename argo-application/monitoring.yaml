@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/calavelas/lazarus-cluster-monitoring
+    repoURL: https://github.com/calavelas/lazarus-argocd
     targetRevision: LAZARUS
-    path: manifests/
+    path: projects/monitoring
     directory:
       recurse: true
   destination:

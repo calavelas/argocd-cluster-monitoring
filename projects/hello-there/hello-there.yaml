@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-nginx-app
+  name: hello-there
   namespace: hello-there
 spec:
   selector:
